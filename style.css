@@ -1,0 +1,89 @@
+
+body {
+    background-color: white;
+}
+div {
+    box-sizing: border-box;
+}
+header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+
+}
+
+#logo img{
+    width: 150px;
+}
+
+#navbar ul {
+    display: flex;
+    box-sizing: border-box;
+}
+#navbar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 5px;
+    width: 70px;
+    height: 100px;
+    box-sizing: border-box;
+}
+#navbar ul li:first-child {
+    border-top: 3px solid aqua;
+    box-sizing: border-box;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#slide img{
+    width: 100%;
+}
+.cat_intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.cat_title {
+    text-transform: uppercase;
+}
+.cat_text {
+    text-align: center;
+    max-width: 500px;
+}
+#services_content{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.services_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: ;
+    width: 500px;
+}
+.sub_content {
+    width: 450px;
+}
+
+#nos_projets {
+    background-color: darkgrey;
+    margin: 20px;
+    
+}
