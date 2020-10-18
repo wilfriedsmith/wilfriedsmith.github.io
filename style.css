@@ -35,7 +35,8 @@ header {
     height: 100px;
     box-sizing: border-box;
 }
-#navbar ul li:first-child {
+
+#navbar ul li:selec {
     border-top: 3px solid aqua;
     box-sizing: border-box;
 }
@@ -48,6 +49,10 @@ header {
 
 #slide img{
     width: 100%;
+}
+.slideitem {
+ display: flex; 
+ ;
 }
 .cat_intro {
     display: flex;
