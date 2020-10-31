@@ -40,7 +40,8 @@ a:link, a:visited, a:hover, a:active {
     border-top: 3px solid transparent;
     box-sizing: border-box;
 }
-#navbar ul li:first-child {
+
+#navbar ul li:selec {
     border-top: 3px solid aqua;
     box-sizing: border-box;
 }
@@ -53,6 +54,10 @@ a:link, a:visited, a:hover, a:active {
 
 #slide img{
     width: 100%;
+}
+.slideitem {
+ display: flex; 
+ ;
 }
 .cat_intro {
     display: flex;
