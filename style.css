@@ -41,7 +41,7 @@ a:link, a:visited, a:hover, a:active {
     box-sizing: border-box;
 }
 
-#navbar ul li:selec {
+#navbar ul li:hover, #navbar ul li:active, #navbar ul li:focus, #navbar ul li:visited {
     border-top: 3px solid aqua;
     box-sizing: border-box;
 }
@@ -52,12 +52,55 @@ a:link, a:visited, a:hover, a:active {
     margin-top: 100px;
 }
 
-#slide img{
-    width: 100%;
+#slider {
+    position: relative;
 }
-.slideitem {
- display: flex; 
- ;
+.sliderinput {
+    display: none;
+}
+.sliderwrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+} 
+.slides {
+ display: flex;
+ padding: 0;
+ width: 200%;
+ line-height: 0;
+ transition: all 800ms cubic-bezier(.770, .000, .175, 1.000);
+}
+#slide1:checked ~ .slides {
+    margin-left: 0;
+}
+#slide2:checked ~.slides {
+    margin-left: -100%;
+}
+.slide {
+    width: calc(100% / 2);
+}
+
+.arrowleft {
+    border: solid black;
+border-width: 0 3px 3px 0;
+display: inline-block;
+padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.arrowright {
+    border: solid black;
+border-width: 0 3px 3px 0;
+display: inline-block;
+padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.slide img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 .cat_intro {
     display: flex;
@@ -69,6 +112,14 @@ a:link, a:visited, a:hover, a:active {
 .cat_title {
     text-transform: uppercase;
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(113, 176, 206);
+    border-radius: 50%;
+    display: inline-block;
+  }
 .cat_text {
     text-align: center;
     max-width: 500px;
@@ -86,14 +137,24 @@ a:link, a:visited, a:hover, a:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 50%;
 }
 .sub_content {
-    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
+.sub_left {
+    display: flex;
+    margin-right: 25px;
+}
+.sub_right p{
+    max-width: 450px;
+}
 #nos_projets {
-    background-color: darkgrey;
+    background-color: rgb(233, 233, 233);
     margin: 20px;
     
 }

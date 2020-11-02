@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>WebAgency</title>
         <link href="/style.css" rel="stylesheet">
+        <link href="/" rel="stylesheet"/>
 
     </head>
     <body>
@@ -21,16 +22,31 @@
             </nav>
         </header>
         <div id="content">
-        <div id="slide">
-            <img src="/images/slider/bg1.jpg" alt="bg1">
+        <div id="slider">
+            <input class="sliderinput" checked type="radio" name="slider" id="slide1"/>
+            <input class="sliderinput" type="radio" name="slider" id="slide2"/>
+            <div class="sliderwrapper">
+            <ul class="slides">
+            <li class="slide">
+                <figure>
+                <img class="slideitem" src="/images/slider/bg1.jpg" alt="bg1"></figure></li>
+            <li class="slide">
+                <figure>
+                <img class="slideitem" src="/images/slider/bg2.jpg" alt="bg2"></figure></li>
+            </ul>
+        </div>
+        <div class="arrows">
+            <div class="arrow"><figure><i class="arrowleft"></i>
+            </figure></div>
+            <div class="arrow"><figure>
+            <i class="arrowright"></i></figure></div>
+        </div>
         </div>
         <div id="nos_services">
             <a id="services"></a>
             <div class="cat_intro">
             <h1 class="cat_title">nos services</h1>
-            <div id="dotes">
-                testgitconnect
-            </div>
+            <span class="dot"></span>
             <p class="cat_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto mollitia eligendi vero aut. Odio, at esse.</p>
             </div>
             <div id="services_content">
@@ -40,7 +56,7 @@
                 <div class="services_flex">
                     <div class="sub_content">
                         <div class="sub_left">
-                            
+                            <span class="dot"></span>
                         </div>
                         <div class="sub_right">
                             <h1 class="sub_title">UX design</h1>
@@ -84,45 +100,16 @@
             <a id="portfolio"></a>
             <div class="cat_intro">
             <h1 class="cat_title">nos projets</h1>
-            <div id="dotes">
-                OOO
-            </div>
+            <span class="dot"></span>
             <p class="cat_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto mollitia eligendi vero aut. Odio, at esse.</p>
             </div>
             <div id="projet_content">
-<<<<<<< HEAD
-                <na<a>All Works</a>
+                <nav><a>All Works</a>
                 <a>Creative</a>
                 <a>Corporate</a>
                 <a>Portfolio</a>
+            </nav>
 
-
-=======
-             <div class="toggle">
-              
-              
-              
-             </div>
-             
-               <div class="toggle">
-              
-              
-              
-               </div>
-            
- <div class="toggle">
-              
-              
-              
- </div>
-  <div class="toggle">
-              
-              
-              
-  </div>
-  
-  <div id=""></div>
->>>>>>> 4dba97f0597096922564c98756a46c8eca5df697
             </div>
     </div>
 		
