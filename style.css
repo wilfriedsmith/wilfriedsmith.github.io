@@ -233,6 +233,16 @@ padding: 3px;
     float: left;
  
  }
+.slide span {
+    color: cadetblue;
+}
+.slide .upper {
+    text-transform: uppercase;
+}
+.slide p {
+    position: absolute;
+    top: 30px;
+}
 
 .cat_intro {
     display: -webkit-box;
