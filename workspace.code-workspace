@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "css",
+			"path": "../../../GitHub/wilfriedsmith.github.io/css"
+		},
+		{
+			"name": "wilfriedsmith.github.io",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "wilfriedsmith.github.io"
+	}
+}

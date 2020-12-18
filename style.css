@@ -63,17 +63,26 @@ p {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
+/* */
 
-#navbar ul li:hover, #navbar ul li:active, #navbar ul li:focus, #navbar ul li:visited {
+#navbar ul li.active {
+    border-top: 3px solid aqua;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#navbar ul li:focus, #navbar ul li:visited, #navbar ul li:hover, #navbar ul li:active{
     border-top: 3px solid aqua;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
 
+
 #content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 1280px;
+    margin: 0 auto 0 auto ;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -81,6 +90,259 @@ p {
     margin-top: 100px;
 }
 
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -200%;
+    }
+    98% {
+      left: -200%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  * {
+    -ms-overflow-style: none;
+  }
+  
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel {
+    position: relative;
+    padding: 20px;
+    height: 550px;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+  }
+  
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel__slide1 {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-image:url("/images/slider/bg1.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  
+  .carousel__slide2 {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-image:url("/images/slider/bg2.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  
+  .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+
+.contentslide {
+    position: relative;
+    top: 45%; 
+    left: 10%;
+    width: 350px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.contentslide h3 {
+    font-size: 20px;
+    color:white;
+    
+
+}
+.contentslide span {
+    color: cadetblue;
+}
+.contentslide .upper {
+    text-transform: uppercase;
+}
+.contentslide p {
+    color:white;
+    font-size: 10px;
+}
+.contentslide button {
+    background-color: aqua;
+    padding: 10px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top : 20px;
+
+    
+}
+.pbar {
+    position: absolute;
+    width : 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: grey;
+}
+.pbarfifty {
+    width : 50%;
+    height: 2px;
+    position: relative;
+    background-color: aqua;
+}
+.pbarfull {
+    width: 100%;
+    height: 2px;
+    position: relative;
+    background-color: aqua;
+}
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel__slide2 .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+
+  
+  .carousel__prev {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    font-size: 0;
+    background-color: blue;
+    padding: 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .carousel__next {
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 0;
+  }
+  
+
+  .arrowl {
+      
+    left: 50%;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 15px;
+    height: 15px;
+  -ms-transform: rotate(135deg);
+      transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+  
+  .carousel__next {
+    right:5px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+
+
+  
 #slider {
     position: relative;
 }
@@ -233,27 +495,6 @@ padding: 3px;
     float: left;
  
  }
-.contentslide {
-    position: absolute;
-    top: 50px; 
-    width: 350px;
-    hei
-}
-.slide h3 {
-    position:  ;
-    font-size: 20px;
-}
-.slide span {
-    color: cadetblue;
-}
-.slide .upper {
-    text-transform: uppercase;
-}
-.slide p {
-    color:white;
-    font-size: 10px;
-}
-
 .cat_intro {
     display: -webkit-box;
     display: -ms-flexbox;
